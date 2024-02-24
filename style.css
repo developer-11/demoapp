@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'urbanist', sans-serif;
+}
+
+:root{
+    --var-primary-color: #288E8FF;
+}
+
+html{
+    font-size: 10px;
+}
+h1,h2,h3,h4{
+    font-family: 'Lexend Deca', sans-serif;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+p{
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
+}
+
+button, input[type="submit"]{
+    border: 1px solid yellow;
+    outline: none;
+    padding: 8px 8px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.06rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+
+/* navigation bar styling */
+.registration-header{
+    height: 100vh;
+    background-image: url("images/img2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.home-header{
+    height: 100vh;
+    background-image: url("images/img2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: lightpink;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+li a{
+    color: aquamarine;
+    text-decoration: none;
+}
+
+/* home page styling */
+
+.hero-section .container{
+    height: inherit;
+}
+.hero-content{
+    color: lightpink;
+    text-align: center;
+}
+.hero-content p{
+    font-size: 15px;
+    color: #e8e8e8;
+    margin-bottom: 1rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+.hero-content button{
+    background-color: palegreen;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px lightblue;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+}
+
+/* registration page styling */
+
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration, .login{
+    min-height: 30rem;
+    min-width: 40vw;
+    background-color: lightpink;
+}
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.form-text{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("images/img3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 2rem;
+    color: aliceblue;
+}
+.form-text p{
+    width: 300px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.form-text button{
+    background-color: lightblue;
+    color: black;
+    box-shadow: 5px 5px 7px steelblue;
+    border-radius: 10px;
+}
+.form-text button:hover{
+    background-color: transparent;
+    color: black;
+}
+.registration-form, .login-form{
+    width: 100%;
+    height: 43vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.registration-form p, .login-form p{
+    margin-top: 2px;
+    margin-bottom: -6px;
+}
+.social-icons{
+    display: flex;
+    gap: 7px;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+.fa-brands{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid lightblue;
+    /* to center the icons */
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    font-size: 15px;
+    cursor: pointer;
+}
+input{
+    
+    width: 20rem;
+    margin: 0.7rem 0;
+    border: none;
+    background-color: #e8e8e8;
+    padding: 1rem 1.8rem;
+    letter-spacing: 0.06rem;
+}
+input[type="submit"]{
+    margin-top: 1rem;
+    min-width: 10rem;
+    background-color: lightblue;
+    color: black;
+    box-shadow: 5px 5px 7px steelblue;
+    border-radius: 10px;
+}
+input[type="submit"]:hover{
+    background-color: black;
+    color: lightgreen;
+    box-shadow: 5px 5px 7px lightgreen;
+}
+/* it checks that login-section--display is present or not */
+.registration:not(.login-section--display){
+    display: none;
+}
+
+.login-section--display .registration{
+    /* showing the registration form */
+    display: block;
+}
+
+.login-section--display .login{
+    /* hiding the login form */
+    display: none;
+}
+
+
+
+
+
+
+
+/* Media Query */
+@media screen and (max-width: 768px){
+    .grid-two--column{
+        grid-template-columns: 1fr;
+    }
+
+    .registration-header .container, .home-header .container{
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .registration-header .container .logo, .home-header .container .logo{
+        padding-top: 2rem;
+    }
+
+    .registration .login{
+        min-width: 90vw;
+    }
+
+    .form-text{
+        order: 1;
+    }
+
+    .registration-form, .login-form{
+        order: 0;
+    }
+}
